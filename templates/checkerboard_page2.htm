@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='checkerboard_style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="checkerboard">
+            <table>
+                {% for x in range(1, 5): %}
+                    {% if x % 2 != 0: %}    
+                        <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                    {% else: %}
+                        <tr><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td></tr>
+                    {% endif%}
+                {% endfor %}
+                
+                <!-- <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>
+                <tr><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td><td class="box1"></td><td class="box2"></td></tr>     -->
+            </table>
+        </div>
+    </div>
+</body>
+</html>
